@@ -31,11 +31,11 @@ class _ProductScreenState extends State<ProductScreen> {
           children: [
             // Image Carousel Section with Back Button
             SizedBox(
-              height: ScreenSize.height * 0.4, // 40% of screen height
+              height: height * 0.4, // 40% of screen height
               child: Stack(
                 children: [
                   // Image Carousel
-                  Container(
+                  SizedBox(
                     height: double.infinity,
                     // color: Colors.red,
                     width: double.infinity,
@@ -178,8 +178,8 @@ class _ProductScreenState extends State<ProductScreen> {
                       ),
                       // Quantity Selector
                       Container(
-                        width: ScreenSize.width * 1,
-                        height: ScreenSize.height * 0.06,
+                        width: width * 1,
+                        height: height * 0.06,
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(6),
@@ -245,8 +245,8 @@ class _ProductScreenState extends State<ProductScreen> {
                       const Spacer(),
                       // Add to Cart Button
                       Container(
-                        width: ScreenSize.width * 1,
-                        height: ScreenSize.height * 0.08,
+                        width: width * 1,
+                        height: height * 0.08,
                         decoration: BoxDecoration(
                           color: const Color(0xFF6CC51D),
                           borderRadius: BorderRadius.circular(6),

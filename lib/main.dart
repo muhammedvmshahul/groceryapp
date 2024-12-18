@@ -24,6 +24,7 @@ import 'features/homePage/pages/categories/categories_grid_details.dart';
 import 'features/homePage/pages/homeScreen/search_filter.dart';
 import 'features/homePage/pages/product_details/product_screen.dart';
 import 'features/splashScreens/screens/SplashScreen.dart';
+import 'features/splashScreens/screens/splash.dart';
 
 
 
@@ -36,7 +37,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ScreenSize.init(context);
+    height = MediaQuery.of(context).size.height;
+    width = MediaQuery.of(context).size.width;
     return MaterialApp(
       routes: {
         '/signup': (context) => const SignUpPage(),
@@ -62,10 +64,11 @@ class MyApp extends StatelessWidget {
         '/paymentMethod':(context)=> const PaymentMethod(),
         '/orderSuccessPage':(context)=> const OrderSuccessPage(),
         '/trackOrderPage':(context)=> const TrackOrderPage(),
-        '/searchFilter':(context)=> const SearchFilter()
+        '/searchFilter':(context)=> const SearchFilter(),
+        '/splashOut':(context)=> const Splash()
       },
       debugShowCheckedModeBanner: false,
-      initialRoute: '/splash',
+      initialRoute: '/splashOut',
     );
   }
 }

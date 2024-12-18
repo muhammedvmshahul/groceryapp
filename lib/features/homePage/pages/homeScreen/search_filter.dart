@@ -54,12 +54,12 @@ class _SearchFilterState extends State<SearchFilter> {
                       ),
                     ),
                     SizedBox(
-                      height: ScreenSize.height * 0.02,
+                      height: height * 0.02,
                     ),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 16),
                       child: SizedBox(
-                        height: ScreenSize.height * 0.05,
+                        height: height * 0.05,
                         child: Row(
                           children: [
                             Expanded(
@@ -125,12 +125,12 @@ class _SearchFilterState extends State<SearchFilter> {
                                 fontSize: 15, fontWeight: FontWeight.w500),
                           ),
                           SizedBox(
-                            height: ScreenSize.height * 0.02,
+                            height: height * 0.02,
                           ),
                           Container(
                             padding: const EdgeInsets.only(right: 8.0, left: 8),
-                            height: ScreenSize.height * 0.06,
-                            width: ScreenSize.width * 1,
+                            height: height * 0.06,
+                            width: width * 1,
                             decoration: BoxDecoration(
                                 color: AppColor.background3,
                                 borderRadius: BorderRadius.circular(5)),
@@ -141,35 +141,35 @@ class _SearchFilterState extends State<SearchFilter> {
                                   color: Colors.orangeAccent,
                                 ),
                                 SizedBox(
-                                  width: ScreenSize.width * 0.01,
+                                  width: width * 0.01,
                                 ),
                                 const Icon(
                                   Icons.star,
                                   color: Colors.orangeAccent,
                                 ),
                                 SizedBox(
-                                  width: ScreenSize.width * 0.01,
+                                  width: width * 0.01,
                                 ),
                                 const Icon(
                                   Icons.star,
                                   color: Colors.orangeAccent,
                                 ),
                                 SizedBox(
-                                  width: ScreenSize.width * 0.01,
+                                  width: width * 0.01,
                                 ),
                                 const Icon(
                                   Icons.star,
                                   color: Colors.grey,
                                 ),
                                 SizedBox(
-                                  width: ScreenSize.width * 0.01,
+                                  width: width * 0.01,
                                 ),
                                 const Icon(
                                   Icons.star,
                                   color: Colors.grey,
                                 ),
                                 SizedBox(
-                                  width: ScreenSize.width * 0.01,
+                                  width: width * 0.01,
                                 ),
                                 const Spacer(),
                                 const Text(
@@ -202,7 +202,7 @@ class _SearchFilterState extends State<SearchFilter> {
                                 fontSize: 15, fontWeight: FontWeight.w500),
                           ),
                           SizedBox(
-                            height: ScreenSize.height * 0.02,
+                            height: height * 0.02,
                           ),
                           Row(
                             children: [
@@ -292,11 +292,11 @@ class _SearchFilterState extends State<SearchFilter> {
                 ),
               ),
               SizedBox(
-                height: ScreenSize.height*0.21,
+                height: height*0.21,
               ),
               MyButton(
-                height: ScreenSize.height * 0.07,
-                width: ScreenSize.width * 1,
+                height: height * 0.07,
+                width: width * 1,
                 onTap: () {
                   Navigator.pop(context);
                 },

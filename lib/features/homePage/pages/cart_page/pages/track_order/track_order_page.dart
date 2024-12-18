@@ -33,8 +33,8 @@ class _TrackOrderPageState extends State<TrackOrderPage> {
               // Order Summary Section
               Container(
                 padding: const EdgeInsets.all(12),
-                height: ScreenSize.height * 0.13,
-                width: ScreenSize.width * 1,
+                height: height * 0.13,
+                width: width * 1,
                 color: Colors.white,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -87,7 +87,7 @@ class _TrackOrderPageState extends State<TrackOrderPage> {
               // Timeline Section
               Container(
                 padding:const  EdgeInsets.only(left: 10,right: 0,top: 10),
-                height: ScreenSize.height*0.65,
+                height: height*0.65,
                 color: Colors.white,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,

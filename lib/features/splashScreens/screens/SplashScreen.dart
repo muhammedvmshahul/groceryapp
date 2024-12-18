@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:groceryapp/features/authpages/authWelcome/pages/authWelcome.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import '../../../core/buttons/myBottun.dart';
 import '../../../core/mediaQuery/mediaQuery.dart';
@@ -7,7 +8,10 @@ import 'imagesUrls.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
-
+  Future<void> _saveButtonState(bool value) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setBool('saveValue', value);
+  }
   @override
   Widget build(BuildContext context) {
     List<Map<String, dynamic>> images = imagesMap;
@@ -68,15 +72,17 @@ class SplashScreen extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.only(bottom: 48),
                 child: MyButton(
-                  height: ScreenSize.height * 0.07,
-                    width: ScreenSize.width * 0.9,
+                  height: height * 0.07,
+                    width: width * 0.9,
                     decoration:  BoxDecoration(
                         color: Colors.green,
                       borderRadius: BorderRadius.circular(5)
 
                     ),
-                  onTap: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>const AuthWelcome()));
+                  onTap: ()async{
+                    await _saveButtonState(true);
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>const AuthWelcome()));
+
                   },
                   child:  const Center(
                           child: Text(

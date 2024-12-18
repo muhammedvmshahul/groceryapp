@@ -1,14 +1,11 @@
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:groceryapp/core/constants/colorConstants.dart';
-import 'package:groceryapp/core/mediaQuery/mediaQuery.dart';
 import 'package:groceryapp/features/homePage/pages/accountDetails/accountScreen.dart';
 import 'package:groceryapp/features/homePage/pages/favorite_page/my_favorite.dart';
 import 'package:groceryapp/features/homePage/pages/cart_page/pages/cartScreen.dart';
 import 'package:groceryapp/features/homePage/pages/homeScreen/home_screen.dart';
-import 'package:groceryapp/features/homePage/widgets/categories_card.dart';
-import 'package:groceryapp/features/homePage/widgets/product_card.dart';
 import '../../core/constants/imageContstants.dart';
 
 class MyHomeScreen extends StatefulWidget {
@@ -19,6 +16,7 @@ class MyHomeScreen extends StatefulWidget {
 }
 
 class _MyHomeScreenState extends State<MyHomeScreen> {
+
   bool favorite = false;
   int selectedIndex = 0;
   final List<Widget> _pages = [
@@ -29,14 +27,12 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
   ];
   @override
   Widget build(BuildContext context) {
-    TextEditingController searchBarController = TextEditingController();
     return Scaffold(
-      // extendBody: true,
-      backgroundColor: AppColor.background2,
+      extendBody: true,
       bottomNavigationBar: BottomNavigationBar(
         selectedFontSize: 0,
         unselectedFontSize: 0,
-        backgroundColor: Colors.white,
+        backgroundColor: AppColor.background1,
         type: BottomNavigationBarType.fixed,
         onTap: (index) {
           if (index == 2) { // For Cart Page

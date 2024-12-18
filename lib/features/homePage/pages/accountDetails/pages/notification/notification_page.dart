@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:groceryapp/core/constants/colorConstants.dart';
-import 'package:groceryapp/core/mediaQuery/mediaQuery.dart';
 
 import 'notification_widget.dart';
 
@@ -22,6 +21,7 @@ class _NotificationPageState extends State<NotificationPage> {
     return Scaffold(
       backgroundColor: AppColor.background2,
       appBar: AppBar(
+        scrolledUnderElevation: 0,
         backgroundColor: AppColor.background1,
         title: const Text('Notifications', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
         centerTitle: true,

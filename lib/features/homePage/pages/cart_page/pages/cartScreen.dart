@@ -33,6 +33,7 @@ class _CartScreenState extends State<CartScreen> {
     return Scaffold(
       backgroundColor: AppColor.background2,
       appBar: AppBar(
+        scrolledUnderElevation: 0,
         backgroundColor: AppColor.background1,
         title: const Text('Shopping Cart',
             style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
@@ -82,8 +83,8 @@ class _CartScreenState extends State<CartScreen> {
                                     ),
                                   ),
                                   child: Container(
-                                    height: ScreenSize.height * 0.12,
-                                    width: ScreenSize.width * 1,
+                                    height: height * 0.12,
+                                    width: width * 1,
                                     decoration: BoxDecoration(
                                         color: AppColor.background1,
                                         borderRadius:
@@ -96,8 +97,8 @@ class _CartScreenState extends State<CartScreen> {
                                             MainAxisAlignment.center,
                                         children: [
                                           Container(
-                                            width: ScreenSize.width * 0.22,
-                                            height: ScreenSize.height * 0.1,
+                                            width: width * 0.22,
+                                            height: height * 0.1,
                                             decoration: BoxDecoration(
                                                 image: DecorationImage(
                                                     image: AssetImage(
@@ -109,7 +110,7 @@ class _CartScreenState extends State<CartScreen> {
                                             ),
                                           ),
                                           SizedBox(
-                                            width: ScreenSize.width * 0.09,
+                                            width: width * 0.09,
                                           ),
                                           // items name and price
                                           Column(
@@ -219,7 +220,7 @@ class _CartScreenState extends State<CartScreen> {
                       ],
                     ),
                     SizedBox(
-                      height: ScreenSize.height * 0.01,
+                      height: height * 0.01,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -264,8 +265,8 @@ class _CartScreenState extends State<CartScreen> {
                         Navigator.pushNamed(context, '/shippingMethod');
                       },
                       child: Container(
-                        width: ScreenSize.width * 1,
-                        height: ScreenSize.height * 0.08,
+                        width: width * 1,
+                        height: height * 0.08,
                         decoration: BoxDecoration(
                             color: AppColor.primaryDark,
                             borderRadius: BorderRadius.circular(8)),

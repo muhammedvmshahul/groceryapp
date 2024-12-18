@@ -203,10 +203,10 @@ class _PaymentMethodState extends State<PaymentMethod> {
                 ],
               ),
               SizedBox(
-                height: ScreenSize.height * 0.006,
+                height: height * 0.006,
               ),
               Container(
-                height: ScreenSize.height*0.23, // Adjust height based on your design
+                height: height*0.23, // Adjust height based on your design
                 width: double.infinity,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
@@ -316,7 +316,7 @@ class _PaymentMethodState extends State<PaymentMethod> {
                                 text: 'Month/Year',
                                 icon: IconConstants.calendarIcon)),
                         SizedBox(
-                          width: ScreenSize.width * 0.02,
+                          width: width * 0.02,
                         ),
                         Expanded(
                             child: TextFormWidget(

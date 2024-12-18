@@ -52,8 +52,8 @@ class _ProductCardState extends State<ProductCard> {
                         // new section
                         SizedBox(
                             child: items['new'].toString().isEmpty?const SizedBox():Container(
-                              width: ScreenSize.width * 0.08,
-                              height: ScreenSize.height * 0.02,
+                              width: width * 0.08,
+                              height: height * 0.02,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(2),
                                 color: const Color(0xFFFDEFD5),
@@ -72,11 +72,11 @@ class _ProductCardState extends State<ProductCard> {
                             child: items['new'].toString().isEmpty?const SizedBox():const SizedBox(height: 2,)),
                         SizedBox(
                             child: items['offer'].toString().isEmpty? SizedBox(
-                              width: ScreenSize.width * 0.08,
-                              height: ScreenSize.height * 0.02,
+                              width: width * 0.08,
+                              height: height * 0.02,
                             ):Container(
-                              width: ScreenSize.width * 0.08,
-                              height: ScreenSize.height * 0.02,
+                              width: width * 0.08,
+                              height: height * 0.02,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(2),
                                 color: const Color(0xFFFEE4E4),
@@ -115,7 +115,7 @@ class _ProductCardState extends State<ProductCard> {
                           ),
                         ),
                         SizedBox(
-                          height: ScreenSize.height * 0.01,
+                          height: height * 0.01,
                         ),
                         Text(
                           '\$ ${items['price']}',
@@ -125,7 +125,7 @@ class _ProductCardState extends State<ProductCard> {
                               fontSize: 12),
                         ),
                         SizedBox(
-                          height: ScreenSize.height * 0.005,
+                          height: height * 0.005,
                         ),
                         SizedBox(
                           // height: 20,
@@ -143,7 +143,7 @@ class _ProductCardState extends State<ProductCard> {
                           ),
                         ),
                         SizedBox(
-                          height: ScreenSize.height * 0.005,
+                          height: height * 0.005,
                         ),
                         Text(
                           items['product_type'],

@@ -2,16 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:groceryapp/core/buttons/myBottun.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:groceryapp/features/authpages/signUpPage/sign_Up_Page.dart';
-
 import '../../../../core/mediaQuery/mediaQuery.dart';
-import '../../loginPage/login_page.dart';
 
-class AuthWelcome extends StatelessWidget {
+
+class AuthWelcome extends StatefulWidget {
   const AuthWelcome({super.key});
 
+  @override
+  State<AuthWelcome> createState() => _AuthWelcomeState();
+}
+
+class _AuthWelcomeState extends State<AuthWelcome> {
   final String _backgroundImage =
       'https://images.pexels.com/photos/18640811/pexels-photo-18640811/free-photo-of-close-up-of-red-peppers.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1';
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,8 +33,8 @@ class AuthWelcome extends StatelessWidget {
                   borderRadius: BorderRadius.only(
                       topRight: Radius.circular(10),
                       topLeft: Radius.circular(10))),
-              height: ScreenSize.height * 0.44,
-              width: ScreenSize.width * 1,
+              height: height * 0.44,
+              width: width * 1,
               child: Padding(
                 padding: const EdgeInsets.only(
                     left: 16, top: 36, right: 16, bottom: 30),
@@ -57,14 +60,14 @@ class AuthWelcome extends StatelessWidget {
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(5)),
                           onTap: () {},
-                          width: ScreenSize.width * 1,
-                          height: ScreenSize.height * 0.064,
+                          width: width * 1,
+                          height: height * 0.064,
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: [
                               Container(
-                                height: ScreenSize.height * 0.03,
-                                width: ScreenSize.width * 0.06,
+                                height: height * 0.03,
+                                width: width * 0.06,
                                 decoration: const BoxDecoration(
                                     image: DecorationImage(
                                         image: AssetImage(
@@ -77,7 +80,7 @@ class AuthWelcome extends StatelessWidget {
                                     fontWeight: FontWeight.bold, fontSize: 15),
                               ),
                               SizedBox(
-                                width: ScreenSize.width * 0.05,
+                                width: width * 0.05,
                               ),
                             ],
                           )),
@@ -95,15 +98,15 @@ class AuthWelcome extends StatelessWidget {
                           Navigator.push(context, MaterialPageRoute(builder: (context)=>SignUpPage()));
 
                           },
-                          width: ScreenSize.width * 1,
-                          height: ScreenSize.height * 0.064,
+                          width: width * 1,
+                          height: height * 0.064,
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: [
                               SvgPicture.asset(
                                 'assets/icons/Vector.svg',
-                                width: ScreenSize.width * 0.06,
-                                height: ScreenSize.height * 0.03,
+                                width: width * 0.06,
+                                height: height * 0.03,
                               ),
                             const  Text(
                                 'Create an account',
@@ -113,7 +116,7 @@ class AuthWelcome extends StatelessWidget {
                                     fontWeight: FontWeight.bold),
                               ),
                               SizedBox(
-                                width: ScreenSize.width * 0.05,
+                                width: width * 0.05,
                               ),
                             ],
                           )),

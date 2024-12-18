@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:groceryapp/features/authpages/loginPage/widgets/email_field.dart';
 import 'package:groceryapp/features/authpages/loginPage/widgets/password_field.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../../../core/buttons/myBottun.dart';
 import '../../../core/mediaQuery/mediaQuery.dart';
-import '../../../core/textFields/myTextField.dart';
 
 class SignInPage extends StatefulWidget {
   const SignInPage({super.key});
@@ -18,7 +17,11 @@ class _SignInPageState extends State<SignInPage> {
   final _formKey = GlobalKey<FormState>();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
-  final TextEditingController _phoneController = TextEditingController();
+  Future<void> _saveButtonState(bool value) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setBool('loginValue', value);
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -75,8 +78,8 @@ class _SignInPageState extends State<SignInPage> {
                   topLeft: Radius.circular(10),
                 ),
               ),
-              height: ScreenSize.height * 0.48,
-              width: ScreenSize.width,
+              height: height * 0.48,
+              width: width,
               child: Padding(
                 padding: const EdgeInsets.all(16),
                 child: SingleChildScrollView(
@@ -101,12 +104,12 @@ class _SignInPageState extends State<SignInPage> {
                         EmailTextField(
                           controller: _emailController,
                         ),
-                        SizedBox(height: ScreenSize.height * 0.013),
+                        SizedBox(height: height * 0.013),
                         // Password Field
                         PasswordField(
                           controller: _passwordController, onChanged: (String value) {  },
                         ),
-                        SizedBox(height: ScreenSize.height * 0.013),
+                        SizedBox(height: height * 0.013),
                         // Sign In Button
                         MyButton(
                           decoration: BoxDecoration(
@@ -117,13 +120,13 @@ class _SignInPageState extends State<SignInPage> {
                             if (_formKey.currentState!.validate()) {
                               ScaffoldMessenger.of(context).showSnackBar(
                                 const SnackBar(content: Text('Form is valid!')),
-
                               );
+                              _saveButtonState(true);
                               Navigator.pushNamed(context, '/MyHomeScreen');
                             }
                           },
-                          width: ScreenSize.width,
-                          height: ScreenSize.height * 0.064,
+                          width: width,
+                          height: height * 0.064,
                           child: const Center(
                             child: Text(
                               'Sign In',
@@ -135,7 +138,7 @@ class _SignInPageState extends State<SignInPage> {
                             ),
                           ),
                         ),
-                        SizedBox(height: ScreenSize.height * 0.02),
+                        SizedBox(height: height * 0.02),
                         // Navigate to Sign Up Page
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,

@@ -16,6 +16,7 @@ class _AboutMePageState extends State<AboutMePage> {
     return Scaffold(
       backgroundColor: AppColor.background2,
       appBar: AppBar(
+        scrolledUnderElevation: 0,
         backgroundColor: AppColor.background1,
         title: const Text("About me",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w500),),
         centerTitle: true,

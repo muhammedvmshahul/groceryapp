@@ -29,8 +29,8 @@ class _NotificationWidgetState extends State<NotificationWidget> {
     return Container(
       padding: EdgeInsets.only(left: 17,right:0,top: 17,bottom: 17),
       color: AppColor.background1,
-      height: ScreenSize.height*0.127,
-      width: ScreenSize.width*1,
+      height: height*0.127,
+      width: width*1,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

@@ -255,7 +255,7 @@ class _ShippingAddressState extends State<ShippingAddress> {
                  )
                 ],
               ),
-              SizedBox(height: ScreenSize.height*0.10773480662,),
+              SizedBox(height: height*0.10773480662,),
               ButtonWidget(onTap:  (){
                 if (_formKey.currentState!.validate()) {
                   // If the form is valid, proceed with saving settings

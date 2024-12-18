@@ -20,6 +20,7 @@ class _MyFavoritePageState extends State<MyFavoritePage> {
     return Scaffold(
       backgroundColor: AppColor.background2,
       appBar: AppBar(
+        scrolledUnderElevation: 0,
         backgroundColor: AppColor.background1,
         title: const Text('Favorite',style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
         centerTitle: true,
@@ -59,8 +60,8 @@ class _MyFavoritePageState extends State<MyFavoritePage> {
                           ),
                         ),
                         child: Container(
-                          height: ScreenSize.height * 0.12,
-                          width: ScreenSize.width * 1,
+                          height: height * 0.12,
+                          width: width * 1,
                           decoration: BoxDecoration(
                               color: AppColor.background1,
                               borderRadius: BorderRadius.circular(10)),
@@ -70,8 +71,8 @@ class _MyFavoritePageState extends State<MyFavoritePage> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Container(
-                                  width: ScreenSize.width * 0.22,
-                                  height: ScreenSize.height * 0.1,
+                                  width: width * 0.22,
+                                  height: height * 0.1,
                                   decoration: BoxDecoration(
                                     image: DecorationImage(
                                       image: AssetImage(items['background'])
@@ -81,7 +82,7 @@ class _MyFavoritePageState extends State<MyFavoritePage> {
                                   child: Image.asset(items['product_image'],fit:BoxFit.fitWidth,),
                                 ),
                                 SizedBox(
-                                  width:ScreenSize.width * 0.09,
+                                  width:width * 0.09,
                                 ),
                                 // items name and price
                                 Column(

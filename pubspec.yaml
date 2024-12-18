@@ -44,6 +44,8 @@ dependencies:
   expansion_tile_card: ^3.0.0
   enhance_stepper: ^1.0.1
   timeline_tile: ^2.0.0
+  shared_preferences:
+  another_flutter_splash_screen: ^1.2.1
 dev_dependencies:
   flutter_test:
     sdk: flutter

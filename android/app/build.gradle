@@ -19,6 +19,15 @@ android {
         jvmTarget = JavaVersion.VERSION_1_8
     }
 
+//    signingConfigs{
+//        release{
+//            keyAlias "my_own_Alias"
+//            storeFile file('release_keystore.jks')
+//            keyPassword "123456789"
+//            storePassword "abcdefghij"
+//        }
+//    }
+
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId = "com.example.groceryapp"
@@ -35,6 +44,8 @@ android {
             // TODO: Add your own signing config for the release build.
             // Signing with the debug keys for now, so `flutter run --release` works.
             signingConfig = signingConfigs.debug
+//            shrinkResources false
+//            minifyEnabled false
         }
     }
 }

@@ -28,16 +28,16 @@ class OrderSuccessPage extends StatelessWidget {
             children: [
               Center(
                 child: SizedBox(
-                  height: ScreenSize.height*0.37,
+                  height: height*0.37,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       SvgPicture.asset(
                         IconConstants.cartIcon,
-                        width: ScreenSize.width * 0.4,
+                        width: width * 0.4,
                       ),
                       SizedBox(
-                        width: ScreenSize.width*0.5,
+                        width: width*0.5,
                         child: const Text(
                           'Your order was succesfull !',
                           textAlign: TextAlign.center,
@@ -45,7 +45,7 @@ class OrderSuccessPage extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: ScreenSize.width*0.68,
+                        width: width*0.68,
                         child: const Text(
                           'You will get a response within a few minutes.',
                           textAlign: TextAlign.center,
@@ -57,7 +57,7 @@ class OrderSuccessPage extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: ScreenSize.height*0.2,
+                height: height*0.2,
               ),
               ButtonWidget(onTap: (){
                 Navigator.pushNamed(context, '/trackOrderPage');

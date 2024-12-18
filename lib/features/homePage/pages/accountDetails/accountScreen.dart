@@ -17,13 +17,13 @@ class AccountScreen extends StatelessWidget {
       body: Stack(
         children: [
           Container(
-            width: ScreenSize.width * 1,
-            height: ScreenSize.height * 1,
+            width: width * 1,
+            height: height * 1,
             color: AppColor.background2,
           ),
           Container(
-            width: ScreenSize.width * 1,
-            height: ScreenSize.height * 0.2,
+            width: width * 1,
+            height: height * 0.2,
             color: AppColor.background1,
           ),
           // dp image circle

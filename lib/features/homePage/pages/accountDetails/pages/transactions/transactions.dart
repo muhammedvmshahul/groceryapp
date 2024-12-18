@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:groceryapp/core/constants/colorConstants.dart';
 import 'package:groceryapp/core/mediaQuery/mediaQuery.dart';
 import 'package:groceryapp/features/homePage/pages/accountDetails/pages/transactions/transactions_list.dart';
@@ -33,8 +32,8 @@ class _TransactionsPageState extends State<TransactionsPage> {
               child: Container(
                 padding:
                     EdgeInsets.only(left: 20, right: 22, top: 0, bottom: 0),
-                width: ScreenSize.width * 1,
-                height: ScreenSize.height * 0.11,
+                width: width * 1,
+                height: height * 0.11,
                 decoration: BoxDecoration(color: AppColor.background1),
                 child: Row(
                   children: [

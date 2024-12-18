@@ -22,6 +22,7 @@ class _FilterPageState extends State<FilterPage> {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 244, 245, 249),
       appBar: AppBar(
+        scrolledUnderElevation: 0,
         backgroundColor: Colors.white,
         elevation: 2,
         title: Row(
@@ -162,7 +163,7 @@ class _FilterPageState extends State<FilterPage> {
               children: [
                 Expanded(
                   child: Container(
-                    height: ScreenSize.height*0.06,
+                    height: height*0.06,
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(5)
@@ -183,7 +184,7 @@ class _FilterPageState extends State<FilterPage> {
                 const SizedBox(width: 5,),
                 Expanded(
                   child: Container(
-                    height: ScreenSize.height*0.06,
+                    height: height*0.06,
                     decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(5)

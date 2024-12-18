@@ -20,6 +20,7 @@ class _CreditCardPageState extends State<CreditCardPage> {
     return Scaffold(
     backgroundColor: AppColor.background2,
       appBar: AppBar(
+        scrolledUnderElevation: 0,
         backgroundColor: AppColor.background1,
         centerTitle: true,
         title: const Text('My Cards',style: TextStyle(fontSize: 18,fontWeight: FontWeight.w500)),
@@ -125,8 +126,8 @@ class _CreditCardPageState extends State<CreditCardPage> {
                               Padding(
                                 padding: const EdgeInsets.only(left:25,right: 25),
                                 child: Container(
-                                  width: ScreenSize.width*1,
-                                  height: ScreenSize.height*0.06,
+                                  width: width*1,
+                                  height: height*0.06,
                                   color: AppColor.background3,
                                   child: Row(
                                     children: [
@@ -143,8 +144,8 @@ class _CreditCardPageState extends State<CreditCardPage> {
                               Padding(
                                 padding: const EdgeInsets.only(left:25,right: 25),
                                 child: Container(
-                                  width: ScreenSize.width*1,
-                                  height: ScreenSize.height*0.06,
+                                  width: width*1,
+                                  height: height*0.06,
                                   color: AppColor.background3,
                                   child: Row(
                                     children: [
@@ -164,7 +165,7 @@ class _CreditCardPageState extends State<CreditCardPage> {
                                     Expanded(
                                       child: Container(
                                         // width: ScreenSize.width*0.5,
-                                        height: ScreenSize.height*0.06,
+                                        height: height*0.06,
                                         color: AppColor.background2,
                                         child: Row(
                                           children: [
@@ -182,7 +183,7 @@ class _CreditCardPageState extends State<CreditCardPage> {
                                     Expanded(
                                       child: Container(
                                         // width: ScreenSize.width*0.5,
-                                        height: ScreenSize.height*0.06,
+                                        height: height*0.06,
                                         color: AppColor.background2,
                                         child: Row(
                                           children: [
@@ -202,8 +203,8 @@ class _CreditCardPageState extends State<CreditCardPage> {
                               Padding(
                                 padding: const EdgeInsets.only(left:25,right: 25),
                                 child: Container(
-                                  width: ScreenSize.width*1,
-                                  height: ScreenSize.height*0.06,
+                                  width: width*1,
+                                  height: height*0.06,
                                   color: AppColor.background3,
                                   child: Row(
                                     children: [
@@ -223,8 +224,8 @@ class _CreditCardPageState extends State<CreditCardPage> {
                               Padding(
                                 padding: const EdgeInsets.only(left:25,right: 25),
                                 child: Container(
-                                  width: ScreenSize.width*1,
-                                  height: ScreenSize.height*0.06,
+                                  width: width*1,
+                                  height: height*0.06,
                                   color: AppColor.background3,
                                   child: Row(
                                     children: [

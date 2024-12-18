@@ -19,6 +19,7 @@ class _AddAddressScreenState extends State<AddAddressScreen> {
     return Scaffold(
       backgroundColor: AppColor.background2,
       appBar: AppBar(
+        scrolledUnderElevation: 0,
         backgroundColor: AppColor.background1,
         centerTitle: true,
         title: const Text('Add Address',style: TextStyle(fontSize: 18,fontWeight: FontWeight.w500),),
@@ -161,7 +162,7 @@ class _AddAddressScreenState extends State<AddAddressScreen> {
                   const Text('Save this address',style: TextStyle(fontSize: 12,fontWeight: FontWeight.w500),)
                 ],
               ),
-               SizedBox(height: ScreenSize.height*0.1),
+               SizedBox(height: height*0.1),
              //
               GestureDetector(
                 onTap: (){

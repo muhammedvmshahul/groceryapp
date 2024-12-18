@@ -14,6 +14,7 @@ class HomeScreen extends StatelessWidget {
         'https://img.freepik.com/free-vector/gradient-supermarket-webinar-template_23-2149361396.jpg?t=st=1732513615~exp=1732517215~hmac=ca11e66ebc708254389a05ef0830c57277e3913e1610fe2fa1cd449b7a755b39&w=1380';
 
     return Scaffold(
+      backgroundColor: AppColor.background2,
       body: Padding(
         padding: const EdgeInsets.only(left: 12, right: 12, top: 30),
         child: SingleChildScrollView(
@@ -41,18 +42,18 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: ScreenSize.height * 0.01,
+                height: height * 0.01,
               ),
               Container(
-                width: ScreenSize.width * 1,
-                height: ScreenSize.height * 0.27,
+                width: width * 1,
+                height: height * 0.27,
                 decoration: BoxDecoration(
                     color: Colors.grey,
-                    image: DecorationImage(
+                    image: DecorationImage (
                         image: NetworkImage(offerImage), fit: BoxFit.fill)),
               ),
               SizedBox(
-                height: ScreenSize.height * 0.01,
+                height: height * 0.01,
               ),
               GestureDetector(
                 onTap: () {
@@ -76,17 +77,17 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: ScreenSize.height * 0.01,
+                height: height * 0.01,
               ),
               // categories listview builder
               SizedBox(
                 // color: Colors.black,
-                  height: ScreenSize.height * 0.13,
-                  width: ScreenSize.width * 1,
+                  height: height * 0.13,
+                  width: width * 1,
                   child: const CategoriesCard()),
               //
               SizedBox(
-                height: ScreenSize.height * 0.02,
+                height: height * 0.02,
               ),
               const Text(
                 'Featured products',

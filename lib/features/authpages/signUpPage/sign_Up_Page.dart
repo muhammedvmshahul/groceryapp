@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:groceryapp/features/authpages/signUpPage/widget/email_Widget.dart';
 import 'package:groceryapp/features/authpages/signUpPage/widget/password_widget.dart';
 import 'package:groceryapp/features/authpages/signUpPage/widget/phone_number_widget.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../../../core/buttons/myBottun.dart';
 import '../../../core/mediaQuery/mediaQuery.dart';
-import '../../../core/textFields/myTextField.dart';
+
 
 class SignUpPage extends StatefulWidget {
   const SignUpPage({super.key});
@@ -25,10 +26,17 @@ class _SignUpPageState extends State<SignUpPage> {
   void _validateForm() {
 
     if (_formKey.currentState!.validate()) {
+      _saveButtonState(true);
       Navigator.pushNamed(context, '/MyHomeScreen');
     }
 
   }
+
+  Future<void> _saveButtonState(bool value) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setBool('loginValue', value);
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -83,8 +91,8 @@ class _SignUpPageState extends State<SignUpPage> {
                     topLeft: Radius.circular(10),
                   ),
                 ),
-                height: ScreenSize.height * 0.60,
-                width: ScreenSize.width,
+                height: height * 0.60,
+                width: width,
                 child: Padding(
                   padding: const EdgeInsets.all(16),
                   child: SingleChildScrollView(
@@ -108,12 +116,12 @@ class _SignUpPageState extends State<SignUpPage> {
                           EmailTextField(
                               controller: _emailController
                           ),
-                          SizedBox(height: ScreenSize.height * 0.009),
+                          SizedBox(height: height * 0.009),
                                 
                           PhoneNumberField(
                               controller: _phoneController
                           ),
-                          SizedBox(height: ScreenSize.height * 0.009),
+                          SizedBox(height: height * 0.009),
                           PasswordField(
                               controller: _passwordController,
                             onChanged: (value) {
@@ -121,15 +129,15 @@ class _SignUpPageState extends State<SignUpPage> {
                             },
                           ),
                              // button gap
-                          SizedBox(height: ScreenSize.height * 0.05),
+                          SizedBox(height: height * 0.05),
                           MyButton(
                             decoration: BoxDecoration(
                               color: Colors.green,
                               borderRadius: BorderRadius.circular(5),
                             ),
                             onTap: _validateForm,
-                            width: ScreenSize.width,
-                            height: ScreenSize.height * 0.064,
+                            width: width,
+                            height: height * 0.064,
                             child: const Center(
                               child: Text(
                                 'Signup',
@@ -141,7 +149,7 @@ class _SignUpPageState extends State<SignUpPage> {
                               ),
                             ),
                           ),
-                          SizedBox(height: ScreenSize.height * 0.02),
+                          SizedBox(height: height * 0.02),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
